@@ -1,0 +1,99 @@
+{% extends 'main/base.html' %}{% load static %}
+{% block content %}
+<main>
+<section class="hero-section hero-toplink">
+  <div class="container hero-grid refined-hero-grid">
+    <div class="hero-copy reveal">
+      <p class="eyebrow">Graphic Audition #CreativeGrowth</p>
+      <h1>Your Partner For Your Brand’s Visual Growth!</h1>
+      <p class="hero-text">
+        We craft high-quality, conversion-focused branding, social media visuals, flyers, mockups, and websites that help your business stand out with confidence.
+      </p>
+      <div class="hero-actions">
+        <a href="/portfolio/" class="btn btn-yellow">VIEW OUR WORK</a>
+        <a href="/contact/" class="btn btn-link top-link-style">GET IN TOUCH <span>→</span></a>
+      </div>
+    </div>
+
+    <div class="hero-premium-panel reveal delay-1">
+      <div class="toplink-showcase-card">
+        <div class="showcase-label">Featured Creative</div>
+        <img src="{% static 'main/images/ga-creative-flyer.jpg' %}" alt="Featured creative work">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quick-services-section patterned-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="section-kicker">&lt;&gt; our services &lt;/&gt;</p>
+      <h2>What can we Do ?</h2>
+    </div>
+    <div class="quick-services-grid">
+      {% for service in services %}
+      <article class="quick-service-card reveal">
+        <div class="service-dot"></div>
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.text }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="about-section patterned-section">
+  <div class="container split-grid">
+    <div class="section-copy reveal">
+      <p class="section-kicker">&lt;&gt; about Us &lt;/&gt;</p>
+      <h2>Who we are</h2>
+      <p class="about-lead">At Graphic Audition,</p>
+      <p>We specialize in delivering exceptional visual design tailored to your business needs. From crafting strong brand identities to building responsive websites and modern social media content, we provide complete creative solutions to grow your online presence.</p>
+      <a href="/about/" class="btn btn-yellow">LEARN MORE</a>
+    </div>
+    <div class="feature-stack reveal delay-1">
+      <article class="feature-highlight">
+        <h3>Professional presentation</h3>
+        <p>Every layout is designed to feel clean, premium, and easy to trust.</p>
+      </article>
+      <article class="feature-highlight">
+        <h3>Mobile-first clarity</h3>
+        <p>Your website sections stay neat and readable on phone screens.</p>
+      </article>
+      <article class="feature-highlight">
+        <h3>Creative direction</h3>
+        <p>We help brands communicate better through strong visuals and structure.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="our-work-cta patterned-section">
+  <div class="container work-cta-wrap reveal">
+    <div>
+      <p class="section-kicker">&lt;&gt; our work &lt;/&gt;</p>
+      <h2>The stories we've told</h2>
+      <p class="section-sub left-sub">See your complete creative portfolio in a dedicated page, without making the homepage crowded.</p>
+    </div>
+    <div class="cta-actions-inline">
+      <a href="/portfolio/" class="btn btn-yellow">VIEW PORTFOLIO</a>
+      <a href="/contact/" class="btn btn-outline-blue">GET A CONSULTATION</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container cta-wrap reveal">
+    <div class="cta-copy">
+      <p class="section-kicker light">&lt;&gt; contact us &lt;/&gt;</p>
+      <h2>Let’s amplify your ideas and build something strong for your brand.</h2>
+      <p>Reach out for branding, social media design, flyer design, mockups, and website work.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="/contact/" class="btn btn-yellow">GET IN TOUCH</a>
+      <a href="{{ instagram_url }}" target="_blank" rel="noreferrer" class="btn btn-outline-light">INSTAGRAM</a>
+    </div>
+  </div>
+</section>
+</main>
+{% endblock %}
