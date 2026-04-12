@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: graphic-audition
+    env: python
+    buildCommand: ./build.sh
+    startCommand: gunicorn graphic_audition.wsgi:application
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: graphic_audition.settings
+      - key: PYTHON_VERSION
+        value: 3.11.9
