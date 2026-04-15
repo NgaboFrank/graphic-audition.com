@@ -1,0 +1,1 @@
+Cloudflare-ready static site. Upload the folder or connect it to Cloudflare Pages. Build command: leave empty. Output directory: /.
